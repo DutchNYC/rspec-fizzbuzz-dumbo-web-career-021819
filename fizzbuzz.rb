@@ -1,13 +1,15 @@
 # Don't forget! This file needs to be 'required' in its spec file
 # See README.md for instructions on how to do this
-def fizzbuzz(int)
-    if int % 3 == 0 # if the number int is divisible by 3
-     return  "Fizz" # Go fizz
-   end
-    if int % 5 == 0
-     return  "Buzz"
-    end
-     if int % 15 == 0
-     return "FizzBuzz"
-   end
-end
+require 'pry'
+def fizzbuzz(num)
+  if num % 3 == 0 && num % 5 == 0
+    "FizzBuzz"
+    elsif num % 3 == 0
+    "Fizz"
+    elsif num % 5 == 0
+    "Buzz"
+  else
+    nil
+    binding.pry
+  end
+end 
